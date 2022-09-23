@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br"><!--elemento ancestral-->
+    <head><!--filho / cabeçalho / oque vem antes de carregar a página-->
+        <meta charset="UTF-8">
+        <title> Curso HTML5, CSS3 e Javascript</title>
+        <style type="text/css">
+            div.container { /*seletores*/
+                width: 100%; /* linha = declaração css = propriedade, separador, valor, fim de linha*/
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                background: linear-gradient(rgba(0,0,0,0.4) 70%, rgba(0,0,0,0.2));
+                padding: 10px;
+                text-align: center;
+            }
+            /*  
+                Estrutura CSS Cascading Style Sheet
+                box-sizing: border-box // sempre setar
+                box-model-- modelo de caixas // TOP, RIGHT, BOTTOM, LEFT - sequencia
+            */
+            body{
+                margin: 0;
+                padding: 0;
+            }
+            *{
+                box-sizing: border-box;
+            }
+            h1, 
+            h2, 
+            h3, 
+            h4, 
+            h5, 
+            h6{
+                margin: 0;
+                font-weight: 300;
+                font-family: 'Roboto', sans-serif;
+                color: #555;
+            }
+            h1.titulo{
+                color: red !important; 
+                /* important é muito usado quando o conteudo dinâmico não é controlado, mas sempre evite */
+            }
+            body>div.container>h1.titulo {
+                font-size: 2em;
+                color: #fff;
+            }
+            h2.titulo{
+                font-size: 1.5em;
+                margin-top: 5%;
+                color: #fff;
+            }
+
+            /* Daqui pra cima é tudo mobile*/
+            body{
+                background: url(/assets/images/hd/background-mobile.webp) no-repeat;
+                background-size: cover; /*cobre a tela toda*/
+                background-position: center center; /* eixo x e eixo y*/
+            }
+            
+            /* tablet*/
+            @media (min-width: 768px) {
+                body{
+                background: url(/assets/images/hd/background-tablet.webp) no-repeat;
+                background-size: cover; /*cobre a tela toda*/
+                background-position: center center; /* eixo x e eixo y*/
+            }
+                   
+            }/**desktop*/
+            @media (min-width: 1280px) {
+                body{
+                background: url(/assets/images/hd/background-desktop.webp) no-repeat;
+                background-size: cover; /*cobre a tela toda*/
+                background-position: center center; /* eixo x e eixo y*/
+            }
+            }
+            /*Extra Large -iMac 27"*/
+            @media (min-width: 1680px) {
+                h1.titulo { 
+                    font-size: 3em;
+                }
+                h2.titulo { 
+                    font-size: 2em;
+                }
+            }
+        </style>
+    </head>
+    <body> <!--filho / corpo / tudo que vem quando carrega a página-->
+       
+        <div class="container"> <!-- tag div é um elemento de bloco, posso manipular ela-->
+            <!-- div, section, nav, header, footer, aside, article, main, todos eles são divs semântica -->
+
+            <h1 class="titulo"> <!-- titulo principal, sempre um por página ou por seção-->
+                Seja bem vindo(a) ao curso de HTML5, CSS3 e Javascript
+            </h1>
+            <h2 class="titulo">
+                Estamos estudando no momento: <i>HTML5</i>
+            </h2><!-- vai de H1 até H6-->
+        </div>
+
+    </body>
+</html>

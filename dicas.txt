@@ -1,0 +1,22 @@
+1 - Coloque uma fonte
+2- Não carregue no negrito
+
+3- fuja do preto, de cores primarias
+https://flatuicolors.com/
+https://color.adobe.com/pt/create/color-wheel - top
+
+Tentar nao usar a cor muito forte
+
+4- utilize imagens de alta definição
+-Sempre que for vetor usar SVG (ícones) - exceto se for colorido ou com muitas cores
+-Sempre que for imagem(JPG) usar o formato webp 
+    - comprimir a imagem exporta e salvar como jpg
+    https://tinypng.com
+    para converter:
+    https://convertio.co/pt/
+
+    PNG nunca pra imagems! Ultimo caso usar JPG
+
+------------------------------------------------------
+Para transferir arquivos, site:
+https://wetransfer.com/
