@@ -20,3 +20,5 @@ Tentar nao usar a cor muito forte
 ------------------------------------------------------
 Para transferir arquivos, site:
 https://wetransfer.com/
+-------------------------------------------------
+Git quando da erro de fatal histories
