@@ -22,3 +22,4 @@ Para transferir arquivos, site:
 https://wetransfer.com/
 -------------------------------------------------
 Git quando da erro de fatal histories
+git  pull origin master --allow-unrelated-historie
