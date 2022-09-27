@@ -1,0 +1,18 @@
+// Neste arquivo vocÊ pode utilizar as fontes disponiveis
+
+// Toda vez que voce encontra um @ um em arquivo css, refere-se a uma diretivas
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans/OpenSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans/OpenSans-Light.ttf') format('truetype');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans/OpenSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
