@@ -20,7 +20,7 @@ carrosArray.forEach((value, key) => {
   carros.innerHTML += `<option value="${key}">${value}</option>`;
 });
 
-carrosArray.forEach((value) => console.log(value));
+// carrosArray.forEach((value) => console.log(value));
 
 const importados = [
   ["BMW", "320i", "M3", "M4", "X5", "X6", "z4 m40i"],
@@ -100,18 +100,66 @@ const americanName = [nomeArray.at(-1), nomeArray[0]].join(", ");
 
 const removeUm = newCarros.splice(0, 3);
 
-console.log(removeUm, "Remove um, splice");
-console.log(americanName, "Formato americano");
-console.log(newCarros, "NewCarros");
+// console.log(removeUm, "Remove um, splice");
+// console.log(americanName, "Formato americano");
+// console.log(newCarros, "NewCarros");
+console.log("----------------------------------------");
 
 //push, pop
 //shift, unshift
-//splice
-//split
-//join
+//splice remove do array original
+//split pega texto e transforma em array
+//join pega um array e gera string
 
-// Programação funcional
-//slice
-//map
-//filter
-//find
+// Programação funcional - Imutabilidade os dados nao mudam
+
+//slice gera um novo array, o segundo parametro é o fim, mas noa esta incluso
+const frutas = ["Banana", "Maça", "Pera", "Uva", "Melância"];
+const primeiras = frutas.slice(1,3);
+console.log(primeiras, "Slice o array original nao muda");
+
+//map - retorna um novo array com os items filtrados 
+/* Vantagens do array map, ele passa em todas as posiçoes do array*/
+const filtro =  function(item){
+   return item === "Pera"|| item === "Maça";
+  //return item.toLowerCase(); 
+}
+// console.log(filtro("Chocolate meio amargo toblerone"));
+const frutasMap = frutas.map(filtro);
+console.log(frutasMap);
+
+//filter tbm vai do inicio ao fim, mas só retorna oque for true
+const frutasFilter = frutas.filter(filtro);
+console.log(frutasFilter);
+
+//find - retorna apenas uma informação, assim que encontra, de primeira
+const frutasFind = frutas.find(filtro);
+console.log(frutasFind);
+console.log('------------------------------------');
+
+const idades = [12, 4, 26, 32, 1, 5, 7, 9, 10, 84, 78, 12, 13, 14, 15, 16, 17];
+const validaIDade = function(idade){
+  if(idade <= 2){
+    return "bebe";
+  }
+  else if( idade > 2 && idade < 13){
+    return "criança";
+  }
+  else if( idade > 13 && idade < 19){
+    return "adolescente";
+  }
+  else if( idade > 19 && idade < 61){
+    return "adulto";
+  }
+  else{
+    return "idoso";
+  }
+}
+const idadesMap = idades.map(validaIDade);
+console.log(idadesMap , "MAP");
+
+const idadesFilter = idades.filter((idade) => idade > 18 && idade < 60);
+console.log(idadesFilter, "Filtro de adulto");
+
+const idadesFind = idades.find((idade)=> idade > 60);
+console.log(idadesFind, "idoso");
